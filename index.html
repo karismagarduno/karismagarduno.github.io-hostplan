@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Plans</title>
+    <script src = "script.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>Hosting Plans</h1>
+    <div class = "container">
+    <div class = "plan1">
+        <h3>Basic</h3>
+        <ul>
+            <li>$3.99 monthly</li>
+            <li>100GB</li>
+            <li>1000GB/Mo</li>
+            <li>10 pages</li>
+            <li>July, August Discount Months</li>
+        </ul>
+        <button class = "button" onclick = "BasicCalc()">Sign Up</button>
+    </div>
+    <div class = "plan2">
+        <h3>Professional</h3>
+        <ul>
+            <li>$5.99 monthly</li>
+            <li>500GB</li>
+            <li>5000GB/Mo</li>
+            <li>50 pages</li>
+            <li>July, August, December Discount Months</li>
+        </ul>
+        <button class = "button" onclick = "ProfCalc()">Sign Up</button>
+    </div>
+    <div class = "plan3">
+        <h3>Ultimate</h3>
+        <ul>
+            <li>$9.99 monthly</li>
+            <li>2000GB</li>
+            <li>20000GB/Mo</li>
+            <li>500 pages</li>
+            <li>July, August Discount Months</li>
+        </ul>
+        <button class = "button" onclick = "UltCalc()">Sign Up</button>
+    </div>
+    </div>
+    <div class = "form" id = "form">
+        <div class = "customizeplan">
+                <h3>Customize Your Plan</h3>
+                <h5 id = "selected"></h5>
+                <button class = "custom" value = "3" onclick = "PlanCalc3()">3 Months</button>
+                <button class = "custom" value = "6" onclick = "PlanCalc6()">6 Months</button>
+                <button class = "custom" value = "12" onclick = "PlanCalc12()">12 Months</button>
+                <button class = "custom" value = "24" onclick = "PlanCalc24()">24 Months</button>
+                <button class = "custom" value = "36" onclick = "PlanCalc36()">36 Months</button>
+                <form name = "signup" onsubmit = "return signupinfo()">
+                    <div class = "container2">
+                        <label for = "fname">First Name:</label><br/>
+                        <input type = "text" id = "fname" name = "fname" placeholder = "First Name" ><br/>
+                    
+                        <label for = "lname">Last Name:</label><br/>
+                        <input type = "text" id = "lname" name = "lname" placeholder = "Last Name" ><br/>
+                    
+                        <label for = "gender">Gender</label><br/>
+                        <select id = "gender" name = "gender">
+                            <option value = "Gender">Select</option>
+                            <option value = "male">Male</option>
+                            <option value = "female">Female</option>
+                            <option value = "other">Other</option>
+                        </select>
+                    
+                        <label for = "num">Contact Number:</label><br/>
+                        <input type = "text" id = "num" name = "num" placeholder="Mobile Number" ><br/>
+                        <h1 id = "price"></h1>
+                        <h1 id = "finprice"></h1>
+                    <button id = "submit" type = "submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    <br/>
+    </div>
+</body>
+</html>
